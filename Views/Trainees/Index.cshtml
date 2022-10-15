@@ -1,0 +1,77 @@
+﻿@model IEnumerable<TE_CODEFIRST.Models.Trainee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="text-success"><i class="fa-solid fa-plus"></i></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineeAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineeDOJ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineeDOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineeMobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineeEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TraineePassword)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.TraineeConfirmPassword)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeDOJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeDOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineePassword)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.TraineeConfirmPassword)
+            </td>*@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TraineeID" class="text-warning"><i class="fa-solid fa-pen-to-square"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.TraineeID" class="text-info"><i class="fa-sharp fa-solid fa-circle-info"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.TraineeID" class="text-danger"><i class="fa-soild fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

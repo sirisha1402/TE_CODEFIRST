@@ -1,0 +1,66 @@
+﻿@model TE_CODEFIRST.Models.Trainee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Trainee</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeAge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeAge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeDOJ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeDOJ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeDOB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeDOB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeMobile)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeMobile)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineePassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineePassword)
+        </dd>
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TraineeConfirmPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TraineeConfirmPassword)
+        </dd>*@
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TraineeID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
